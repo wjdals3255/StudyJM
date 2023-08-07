@@ -1,1 +1,5 @@
-console.log("hellowWorld!");
+//console.log("Hello World!"); //fux HW
+'use strict'
+
+
+
