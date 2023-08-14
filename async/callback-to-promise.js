@@ -10,6 +10,7 @@ class UserStorage {
           resolve(id);
         } else {
           reject(new Error('not found'))
+          
         }
       }, 2000);
     });
@@ -26,7 +27,22 @@ class UserStorage {
       }, 1000);
     });
   }
-} 
+}
+
+const a = getRules('jm')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const userStorage = new UserStorage();
 const id = prompt('enter your id')
