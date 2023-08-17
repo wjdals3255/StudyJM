@@ -4,7 +4,7 @@
  * @title string // 광주, 서울, 부산
  */
 const citis = [
-  // 채우기
+  
 ]
 /**
  * @Booking-key number
@@ -45,17 +45,24 @@ function orders() {
   console.log(bookings)
 }
 
+async function init (){
+  const keyword = {
+    type: "PICKUP",
+    ymd: "2023-08-17",
+    city: 1
+  }
+  
+  
+  // 고정 
+  const car = await search(keyword)
+  const booking = await booking({
 
-const keyword = {
-  // 채우기
+  }, car)
+  
+  if(booking.mode) {
+    orders()
+  }
+  
 }
 
-
-// 고정 
-const car = await search(keyword)
-const booking = await booking(keyword, car)
-
-if(booking.mode) {
-  orders()
-}
-
+init ()
